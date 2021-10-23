@@ -11,10 +11,13 @@
   "dependencies": {
     "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-query": "^3.26.0",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "@types/react": "17.0.24",
+    "@types/styled-components": "^5.1.15",
     "autoprefixer": "^10.3.6",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
