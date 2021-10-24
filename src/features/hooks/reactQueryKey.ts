@@ -1,3 +1,8 @@
 export enum reactQueryKey {
-  sss = 'sss'
+  StrapiAllBio = 'StrapiAllBio',
+  StrapiHighestEducation = 'StrapiHighestEducation',
+  StrapiCurrentJob = 'StrapiCurrentJob',
+  StrapiAllJob = 'StrapiAllJob',
+  StrapiAllEducation = 'StrapiAllEducation',
+  DatayolkContent = 'DatayolkContent',
 }

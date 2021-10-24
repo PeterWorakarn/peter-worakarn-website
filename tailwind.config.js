@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         app_white: '#F7FBFE',
         app_dark: '#333333',
+        skeletons: '#E5E7EB',
         typo: {
           main: '#2D2D2D',
           minor: '#CBCBCB',

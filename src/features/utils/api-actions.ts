@@ -1,6 +1,6 @@
 import api from "./api";
 import { GithubUserInfoErrorResponse, TGithubReposReadMe, TGithubUserInfo, TGithubUserRepos } from "../../constant-enum-type/Github";
-import { TCareer, TEducation } from "../../constant-enum-type/Strapi";
+import { TBio, TCareer, TEducation } from "../../constant-enum-type/Strapi";
 import { TWordpressRESTAPI } from "../../constant-enum-type/Wordpress";
 
 // Github api
@@ -15,17 +15,20 @@ export function fetchGithubReposReadMe(name: string, project_name: string): Prom
 }
 
 // Strapi api
-export function fetchCurrentJob(): Promise<TCareer> {
+export function fetchCurrentJob(): Promise<TCareer[]> {
   return api.get('https://peter.datayolk.net/careers?Current_job=true&_limit=1').then((data) => data.data);
 }
-export function fetchAllJob(): Promise<TCareer> {
-  return api.get('https://peter.datayolk.net/careers').then((data) => data.data);
+export function fetchAllJob(): Promise<TCareer[]> {
+  return api.get('https://peter.datayolk.net/careers?_sort=Start_date:DESC&_limit=4').then((data) => data.data);
 }
-export function fetchHighestEducation(): Promise<TEducation> {
+export function fetchAllBio(): Promise<TBio> {
+  return api.get('https://peter.datayolk.net/peter-bio').then((data) => data.data);
+}
+export function fetchHighestEducation(): Promise<TEducation[]> {
   return api.get('https://peter.datayolk.net/educations?Highest_education=true&_limit=1').then((data) => data.data);
 }
-export function fetchAllEducation(): Promise<TEducation> {
-  return api.get('https://peter.datayolk.net/educations').then((data) => data.data);
+export function fetchAllEducation(): Promise<TEducation[]> {
+  return api.get('https://peter.datayolk.net/educations?_sort=Start_date:DESC&_limit=4').then((data) => data.data);
 }
 
 // Datayolk api
