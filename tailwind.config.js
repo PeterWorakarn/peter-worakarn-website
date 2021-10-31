@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'print': {'raw' : 'print'}
+        'print': { 'raw': 'print' }
       },
       colors: {
         app_white: '#F7FBFE',
@@ -20,8 +20,18 @@ module.exports = {
       },
     },
     variants: {
-      extend: {},
+      extend: {
+        textColor: [
+          "selection"
+        ],
+        backgroundColor: [
+          "selection"
+        ],
+      },
     },
-    plugins: [],
+    plugins: [
+      require('@tailwindcss/typography'),
+      require("tailwindcss-selection-variant"),
+    ],
   }
 }

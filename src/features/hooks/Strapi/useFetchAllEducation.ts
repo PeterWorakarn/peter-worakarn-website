@@ -2,10 +2,12 @@ import { useQuery } from 'react-query';
 import { fetchAllEducation } from '../../utils/api-actions';
 import { reactQueryKey } from '../reactQueryKey';
 
-const useFetchAllEducation = () => {
+const useFetchAllEducation = (isEnable: boolean) => {
   return useQuery(
     [reactQueryKey.StrapiAllEducation],
-    () => fetchAllEducation(),
+    () => fetchAllEducation(),{
+      enabled: isEnable,
+    }
   );
 };
 

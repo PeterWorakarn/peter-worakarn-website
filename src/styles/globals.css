@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hightlight mode */
+/* Scrollbar mode */
+.scorll_bar::-webkit-scrollbar-track {
+	box-shadow: none;
+	background-color: rgba(0, 0, 0, 0.10);
+}
+.scorll_bar::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+	background-color: #FFF;
+}
+.scorll_bar::-webkit-scrollbar-thumb {
+	background-color: #6E6F73;
+	border: 0px solid #fff;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/* Print Mode */
 @media print {
   @page {
       margin: 0 !important;
   }
 
   body {
-      padding: 75px; /* This will act as your margin. Originally, the margin will hide the header and footer text. */
+    padding: 75px; /* This will act as your margin. Originally, the margin will hide the header and footer text. */
+  }
+  .resume {
+    position: fixed;
   }
 }

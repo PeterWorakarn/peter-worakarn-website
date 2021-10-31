@@ -11,8 +11,11 @@ export function fetchGithubUserRepos(name: string): Promise<TGithubUserRepos> {
   return api.get(`https://api.github.com/users/${name}/repos`).then((data) => data.data);
 }
 export function fetchGithubReposReadMe(name: string, project_name: string): Promise<TGithubReposReadMe> {
-  return api.get(`https://raw.githubusercontent.com/${name}/${project_name}/master/README.md`).then((data) => data.body);
+  return api.get(`https://raw.githubusercontent.com/${name}/${project_name}/master/README.md`);
 }
+// export function fetchGithubReposReadMe(name: string, project_name: string): Promise<TGithubReposReadMe> {
+//   return api.get(`https://api.github.com/repos/${name}/${project_name}/README`).then((data) => data.data);
+// }
 
 // Strapi api
 export function fetchCurrentJob(): Promise<TCareer[]> {

@@ -2,13 +2,26 @@
 
 ### DOM Tree
 ---
-`
-fff
-`
+```
+Resume feature
+ResumePage/
+├─ ResumeContainer/
+│  ├─ SkeletonElement
+│  ├─ Content (optional)
+├─ FAB/
+```
+
+### Global Stateless Component
+---
+| Name | Description | Props |
+| ----------- | ----------- | ----------- |
+| FAB | Float Action Button | text, icon, action |
+| SkeletonsElement | Skeleton loading | width, height |
 
 ### Variable name
 ---
 | Name | Description | Where |
 | ----------- | ----------- | ----------- |
-| Header | Title | x |
-| Paragraph | Text | x |
+| bioQuery | API | resume |
+| latestJobQuery | API | resume |
+| educationQuery | API | resume |

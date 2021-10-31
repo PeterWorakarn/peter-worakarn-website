@@ -2,10 +2,12 @@ import { useQuery } from 'react-query';
 import { fetchAllBio } from '../../utils/api-actions';
 import { reactQueryKey } from '../reactQueryKey';
 
-const useFetchAllBio = () => {
+const useFetchAllBio = (isEnable: boolean) => {
   return useQuery(
     [reactQueryKey.StrapiAllBio],
-    () => fetchAllBio(),
+    () => fetchAllBio(), {
+      enabled: isEnable,
+    }
   );
 };
 

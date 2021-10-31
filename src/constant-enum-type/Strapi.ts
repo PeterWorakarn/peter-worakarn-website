@@ -47,6 +47,7 @@ export type TBio = TStrapi & {
   "blog": string | null;
   "bio": string;
   "avatar": TStrapiImageFormat;
+  "skill_set": string[];
 };
 
 export type TCareer = TStrapi & {

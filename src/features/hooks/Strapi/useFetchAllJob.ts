@@ -2,10 +2,12 @@ import { useQuery } from 'react-query';
 import { fetchAllJob } from '../../utils/api-actions';
 import { reactQueryKey } from '../reactQueryKey';
 
-const useFetchAllJob = () => {
+const useFetchAllJob = (isEnable: boolean) => {
   return useQuery(
     [reactQueryKey.StrapiAllJob],
-    () => fetchAllJob(),
+    () => fetchAllJob(),{
+      enabled: isEnable,
+    }
   );
 };
 
