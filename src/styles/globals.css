@@ -1,6 +1,28 @@
+@import './font.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1,h2,h3,h4,h5,h6,p {
+    font-family: Inter;
+  }
+}
+
+.sphere {
+  transform: translate3d(-4.5px,10.372px,0);
+  border-radius: 50%;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 10%), 0 8px 10px 1px rgb(0 0 0 / 4%), 0 3px 14px 2px rgb(0 0 0 / 2%);
+}
+.sphere-red {background: radial-gradient(81.08% 81.08% at 19.27% 18.92%,#FFA494 0,#E53E51 100%);}
+.sphere-blue {background: radial-gradient(81.08% 81.08% at 19.27% 18.92%,#83eaf1 0,#63a4ff 100%);}
+.sphere-pink {background: radial-gradient(81.08% 81.08% at 19.27% 18.92%,#fad0c4 0,#f1a7f1  100%);}
+
+.primary-blue-gradient {
+  @apply bg-gradient-to-r from-[#83eaf1] to-[#63a4ff];
+}
 
 /* Hightlight mode */
 /* Scrollbar mode */
