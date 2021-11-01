@@ -20,10 +20,10 @@ const resumeVariants = {
 }
 
 const ResumeContainer: React.FC = () => {
-  const [isEnable, setIsEnable] = useState(false);
-  setTimeout(() => {
-    setIsEnable(true)
-  }, 1000)
+  const [isEnable, setIsEnable] = useState(true);
+  // setTimeout(() => {
+  //   setIsEnable(true)
+  // }, 1000)
   const bioQuery = useFetchAllBio(isEnable);
   const latestJobQuery = useFetchCurrentJob(isEnable);
   const jobQuery = useFetchAllJob(isEnable);
