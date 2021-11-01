@@ -1,16 +1,19 @@
 import { AnimatePresence } from 'framer-motion'
+import dynamic from 'next/dynamic'
 import type { NextPage } from 'next'
-import FAB from '../features/components/FAB'
 import ResumeContainer from '../features/ResumeContainer'
+
+const Back = dynamic(import('../features/components/Back'));
+const FAB = dynamic(import('../features/components/FAB'));
 
 const ResumePage: NextPage = () => {
   return (
     <section className="p-2 sm:p-8 bg-app_dark h-full print:p-0">
-      {/* TODO: Glassy layer */}
-      <div className="relative max-w-3xl mx-auto bg-app_white rounded-md">
-        <div className="absolute top-20 left-0 w-40 h-40 rounded-full bg-red-500" />
-        <div className="absolute top-0 left-20 w-52 h-52 rounded-full bg-blue-500" />
-        <div className="absolute -top-20 -left-20 w-60 h-60 rounded-full bg-pink-500" />
+      <div className="max-w-3xl mx-auto print:hidden text-typo-minor"><Back path="/" /></div>
+      <div className="relative overflow-hidden max-w-3xl mx-auto bg-app_white rounded-md">
+        <div className="animate-pulse absolute top-10 left-28 w-40 h-40 sphere sphere-red" />
+        <div className="animate-pulse absolute -top-20 left-20 w-52 h-52 sphere sphere-pink" />
+        <div className="animate-pulse absolute top-0 -left-20 w-60 h-60 sphere sphere-blue" />
         <ResumeContainer />
       </div>
       <div className="print:hidden">

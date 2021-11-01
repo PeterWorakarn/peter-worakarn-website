@@ -37,6 +37,7 @@ export type TStrapiImageFormat = {
 };
 
 export type TBio = TStrapi & {
+  "Short_name": string;
   "Date_of_birth": string;
   "First_name": string;
   "Last_name": string;
