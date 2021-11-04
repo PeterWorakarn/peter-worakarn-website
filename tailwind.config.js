@@ -16,7 +16,7 @@ module.exports = {
       colors: {
         app_white: '#F7FBFE',
         app_dark: '#333333',
-        skeletons: '#e4e4e4',
+        skeletons: '#E3E3E3',
         primary_pink:'#E26A9A',
         primary_blue:'#274CD7',
         primary_yellow:'#CD8B0F',
