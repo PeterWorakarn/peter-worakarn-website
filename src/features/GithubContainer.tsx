@@ -1,3 +1,4 @@
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const GithubContainer: React.FC = () => {
@@ -21,7 +22,9 @@ const GithubContainer: React.FC = () => {
   }, [])
 
   return (
-    <>Github</>
+    <div className="relative">Github
+     
+    </div>
   )
 }
 

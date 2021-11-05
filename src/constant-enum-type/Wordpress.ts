@@ -4,7 +4,8 @@ export type TWordpressRESTAPI = {
   title: string;
   description: string;
   url: string;
-  categories: string;
+  date: string;
+  category: string;
   tags: {
     name: string;
   }[];

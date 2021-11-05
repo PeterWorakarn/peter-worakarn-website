@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { getPeterDatayolkAssetPath, getUTMOutboundPath } from '../configs'
+import { getPeterDatayolkAssetPath, getUTMOutboundPath } from '../cdivonfigs'
 
 import { TBio } from '../constant-enum-type/Strapi'
 import dynamic from 'next/dynamic'
@@ -32,12 +32,12 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ Biodata }) => {
   return (
-    <>
+    <div className="flex flex-col gap-40">
       <BioContainer data={Biodata} />
       <Link href="/resume"><a>Resume</a></Link>
       <GithubContainer />
       <DatayolkContainer />
-    </>
+    </div>
   )
 }
 

@@ -10,12 +10,14 @@ module.exports = {
         'print': { 'raw': 'print' }
       },
       fontFamily: {
+        'head_english': ['NotoSerifDisplay', 'serif'],
+        'head_thai': ['ThaiSansNeue', 'serif'],
         'sans_english': ['Inter', 'sans-serif'],
-        'head': ['NotoSerifDisplay', 'serif'],
+        'sans_thai': ['Sarabun', 'sans-serif'],
       },
       colors: {
         app_white: '#F7FBFE',
-        app_dark: '#333333',
+        app_dark: '#282828',
         skeletons: '#E3E3E3',
         primary_pink:'#E26A9A',
         primary_blue:'#274CD7',
@@ -40,6 +42,7 @@ module.exports = {
     plugins: [
       require('@tailwindcss/typography'),
       require("tailwindcss-selection-variant"),
+      require('@tailwindcss/aspect-ratio'),
     ],
   }
 }
