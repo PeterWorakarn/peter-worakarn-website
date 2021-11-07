@@ -12,3 +12,5 @@ export const CONTENT_LENGTH_STRIP = 150;
 export const THUMBNAIL_WIDTH = 310;
 export const THUMBNAIL_HEIGHT = 180;
 export const DATAYOLK_CONTENT_LENGTH = 7;
+export const GITHUB_CONTENT_LENGTH = 7;
+export const GITHUB_USER = 'PeterWorakarn';
