@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { getPeterDatayolkAssetPath, getUTMOutboundPath } from '../cdivonfigs'
+import { getPeterDatayolkAssetPath, getUTMOutboundPath } from '../configs'
 
 import { TBio } from '../constant-enum-type/Strapi'
 import dynamic from 'next/dynamic'
