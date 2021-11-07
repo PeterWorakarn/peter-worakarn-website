@@ -23,6 +23,12 @@ module.exports = {
         primary_blue:'#274CD7',
         primary_yellow:'#CD8B0F',
         primary_orange:'#C44F34',
+        accent_blue:'#6EA2FF',
+        accent_pink:'#FF8983',
+        accent_orange:'#FFAC73',
+        accent_green:'#00E5BE',
+        accent_gray:'#F2F2F2',
+        accent_purple:'#B47BFF',
         typo: {
           main: '#2D2D2D',
           minor: '#6E7278',
