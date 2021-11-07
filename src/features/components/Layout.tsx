@@ -16,7 +16,7 @@ const Layout: React.FC = (props) => {
     <div id="layout">
       <AnimatePresence
         exitBeforeEnter
-        initial={false}
+        initial={true}
         onExitComplete={() => window.scrollTo(0, 0)}
       >
         <motion.section
@@ -38,7 +38,7 @@ const Layout: React.FC = (props) => {
           {props.children}
         </motion.section>
       </AnimatePresence>
-      <footer className="text-typo-minor font-sans_english container px-5 py-2 mx-auto flex items-center justify-center sm:flex-row flex-col">
+      <footer className="text-typo-minor font-sans_english container px-5 py-2 mt-10 sm:mt-10 mx-auto flex items-center justify-center sm:flex-row flex-col">
         <p>Made with <span className="text-primary_pink">❤️</span> by <a href={getUTMOutboundPath({ path: 'https://github.com/PeterWorakarn' })} rel="noreferrer" target="_blank" className="text-white font-sans_english ml-1">Peter O.</a></p>
       </footer>
     </div>

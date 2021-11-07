@@ -7,17 +7,18 @@ import moment from "moment-timezone"
 import { CONTENT_LENGTH_STRIP, DATAYOLK_CONTENT_LENGTH, getUTMOutboundPath, PLACEHOLDER_IMAGE, THUMBNAIL_HEIGHT, THUMBNAIL_WIDTH } from "../configs"
 
 const ArticleSkeleton = dynamic(import('../features/components/skeletons/ArticleSkeleton'));
+const SectionHeader = dynamic(import('../features/components/SectionHeader'));
 
 const DatayolkContainer: React.FC = () => {
   const datayolkQuery: UseQueryResult<TWordpressRESTAPI, unknown> = useFetchDatayolkContent()
   return (
     <section>
       <div className="flex justify-between items-baseline">
-        <h2 className="mb-0 text-4xl font-sans_english text-white">Latest · Datayolk · Blog</h2>
-        <a target="_blank" rel="noreferrer" href={getUTMOutboundPath({ path: 'https://datayolk.net/blog' })}>Visit Datayolk ?</a>
+        <SectionHeader title="Latest · Datayolk · Blog" />
+        {/* <a target="_blank" rel="noreferrer" href={getUTMOutboundPath({ path: 'https://datayolk.net/blog' })}>Visit Datayolk ?</a> */}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
-        {datayolkQuery.status === "loading" && (
+        {datayolkQuery.status !== "success" && (
           <>
             {Array(DATAYOLK_CONTENT_LENGTH - 1)
               .fill('')
@@ -48,7 +49,7 @@ const DatayolkContainer: React.FC = () => {
                   <span className="font-sans_english text-white font-medium">{eachContent.category}</span>
                   <time className="capitalize text-typo-minor font-sans_english">{moment(eachContent.date).format('MMM YYYY')}</time>
                 </div>
-                <h3 className="font-head_thai font-medium leading-8 tracking-wide text-3xl text-white" dangerouslySetInnerHTML={{ __html: `${eachContent.title}` }}></h3>
+                <h3 className="font-head_thai font-medium leading-9 tracking-wide text-3xl text-white" dangerouslySetInnerHTML={{ __html: `${eachContent.title}` }}></h3>
                 {/* <p className="font-sans_thai font-light text-typo-minor" dangerouslySetInnerHTML={{ __html: `${eachContent.description.length > CONTENT_LENGTH_STRIP ? `${eachContent.description.substring(0, CONTENT_LENGTH_STRIP)}...` : eachContent.description}` }}></p> */}
               </article>
             </a>
