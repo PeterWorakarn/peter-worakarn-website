@@ -34,7 +34,7 @@ const Home: NextPage<HomeProps> = ({ Biodata }) => {
   return (
     <div className="flex flex-col gap-40">
       <BioContainer data={Biodata} />
-      <Link href="/resume"><a>Resume</a></Link>
+      <Link prefetch={false} href="/resume"><a>Resume</a></Link>
       <GithubContainer />
       <DatayolkContainer />
     </div>

@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
+// npm install @next/bundle-analyzer
+// const withBundleAnalyzer = require("@next/bundle-analyzer")({
+//   enabled: false,
+// })
+// module.exports = withBundleAnalyzer({
+//   ...
+// })
 module.exports = {
   experimental: {
     concurrentFeatures: true,
@@ -10,3 +17,4 @@ module.exports = {
     domains: ['avatars.githubusercontent.com', 'peter.datayolk.net', 'datayolk.net', 'dummyimage.com'], // TODO: configure real domains
   },
 }
+
