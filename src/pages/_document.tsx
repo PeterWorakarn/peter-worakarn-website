@@ -41,10 +41,10 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang='en'>
         <Head>
           <link rel="manifest" href="/manifest.json" />
-          <meta name="theme-color" content="#90cdf4" />
+          <meta name="theme-color" content="#455AFB" />
         </Head>
         <body className="resume scorll_bar bg-app_dark">
           <Main />

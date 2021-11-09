@@ -47,6 +47,7 @@ export type TBio = TStrapi & {
   "Tagline": string;
   "blog": string | null;
   "bio": string;
+  "github": string;
   "avatar": TStrapiImageFormat;
   "skill_set": string[];
 };

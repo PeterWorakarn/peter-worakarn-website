@@ -62,7 +62,7 @@ const GithubContainer: React.FC = () => {
         <SectionHeader title="Github · Project" />
         {/* <a target="_blank" rel="noreferrer" href={getUTMOutboundPath({ path: 'https://datayolk.net/blog' })}>Visit Datayolk ?</a> */}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-10 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 mt-10">
         {githubQuery.status !== "success" && (
           <>
             {Array(GITHUB_CONTENT_LENGTH - 1)

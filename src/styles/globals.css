@@ -8,7 +8,12 @@
     font-family: Inter;
   }
 }
-
+.description_markdown a {
+  @apply underline text-app_white;
+}
+.custom_underline {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0) 65%, #455AFB 65%);
+}
 .sphere {
   transform: translate3d(-4.5px,10.372px,0);
   border-radius: 50%;

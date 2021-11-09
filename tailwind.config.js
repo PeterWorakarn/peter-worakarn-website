@@ -20,7 +20,7 @@ module.exports = {
         app_dark: '#282828',
         skeletons: '#E3E3E3',
         primary_pink:'#E26A9A',
-        primary_blue:'#274CD7',
+        primary_blue:'#455AFB',
         primary_yellow:'#CD8B0F',
         primary_orange:'#C44F34',
         accent_blue:'#6EA2FF',

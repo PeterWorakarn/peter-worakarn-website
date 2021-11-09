@@ -1,0 +1,19 @@
+import Link from "next/link";
+
+const Header: React.FC = (props) => {
+  return (
+    <header className="flex justify-end py-5 px-5 sm:px-0">
+      <Link prefetch={false} href="/resume">
+        <a className="text-sm text-white font-sans_english flex gap-2 py-1 px-3 bg-typo-minor rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+          </svg>
+          <p>Resume</p>
+        </a>
+      </Link>
+    </header>
+  )
+}
+
+export default Header;
