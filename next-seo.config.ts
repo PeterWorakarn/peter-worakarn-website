@@ -1,17 +1,15 @@
+
 /* eslint-disable import/no-anonymous-default-export */
-export default {
-  title: "Next Movies",
-  titleTemplate: "Next SEO | %s",
-  description: "Database of movies created with Next.js and Strapi",
+const defaultSeo = {
+  title: "Home",
+  titleTemplate: "%s – Peter O.",
+  description: "Personal Website of Peter O.",
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://www.nextmovies.test',
-    site_name: 'Next Movies',
+    site_name: 'Peter O.',
   },
   twitter: {
-    handle: '@ivan_doric',
-    site: '@WatchLearnTuts',
     cardType: 'summary_large_image',
   },
   additionalLinkTags:
@@ -31,3 +29,5 @@ export default {
       // }
     ]
 };
+
+export default defaultSeo;

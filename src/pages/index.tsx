@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
-import { getPeterDatayolkAssetPath, getUTMOutboundPath } from '../configs'
-
 import { TBio } from '../constant-enum-type/Strapi'
 import dynamic from 'next/dynamic'
+import { NextSeo } from 'next-seo'
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
+import { BioState } from '../store'
+import { useEffect } from 'react'
 
 const BioContainer = dynamic(import('../features/BioContainer'));
 const GithubContainer = dynamic(import('../features/GithubContainer'));
@@ -31,10 +31,17 @@ interface HomeProps {
 }
 
 const Home: NextPage<HomeProps> = ({ Biodata }) => {
+  const setBio = useSetRecoilState(BioState)
+  useEffect(() => {
+    setBio(Biodata);
+  }, [])
+  const SEO = {
+    description: Biodata.bio
+  }
   return (
     <div className="flex flex-col gap-40">
+      <NextSeo {...SEO} />
       <BioContainer data={Biodata} />
-      <Link prefetch={false} href="/resume"><a>Resume</a></Link>
       <GithubContainer />
       <DatayolkContainer />
     </div>
