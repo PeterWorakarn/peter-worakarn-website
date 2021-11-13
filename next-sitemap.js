@@ -1,4 +1,4 @@
-export const siteUrl = "peter-o.tech";
+const siteUrl = "peter-o.tech";
 
 module.exports = {
   siteUrl,
