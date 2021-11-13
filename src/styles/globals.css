@@ -9,8 +9,12 @@
   }
 }
 .description_markdown a {
-  @apply underline text-app_white;
+  @apply text-app_white;
 }
+/* .description_markdown a:hover {
+  text-decoration: wavy underline #455AFB;
+  text-decoration-thickness: 3px;
+} */
 .custom_underline {
   background-image: linear-gradient(to bottom, rgba(255,255,255,0) 65%, #455AFB 65%);
 }

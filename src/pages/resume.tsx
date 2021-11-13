@@ -1,6 +1,5 @@
-import dynamic from 'next/dynamic'
-import type { NextPage } from 'next'
-// import ResumeContainer from '../features/ResumeContainer'
+import dynamic from 'next/dynamic';
+import type { NextPage } from 'next';
 
 const Back = dynamic(import('../features/components/Back'));
 const FAB = dynamic(import('../features/components/FAB'));

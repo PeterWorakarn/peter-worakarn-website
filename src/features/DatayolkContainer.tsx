@@ -4,18 +4,19 @@ import dynamic from 'next/dynamic';
 import { UseQueryResult } from "react-query"
 import { TWordpressRESTAPI } from "../constant-enum-type/Wordpress"
 import moment from "moment-timezone"
-import { CONTENT_LENGTH_STRIP, DATAYOLK_CONTENT_LENGTH, getUTMOutboundPath, PLACEHOLDER_IMAGE, THUMBNAIL_HEIGHT, THUMBNAIL_WIDTH } from "../configs"
+import { DATAYOLK_CONTENT_LENGTH, getUTMOutboundPath, PLACEHOLDER_IMAGE, THUMBNAIL_HEIGHT, THUMBNAIL_WIDTH } from "../configs"
 
 const ArticleSkeleton = dynamic(import('../features/components/skeletons/ArticleSkeleton'));
 const SectionHeader = dynamic(import('../features/components/SectionHeader'));
+const More = dynamic(import('../features/components/More'));
 
 const DatayolkContainer: React.FC = () => {
   const datayolkQuery: UseQueryResult<TWordpressRESTAPI, unknown> = useFetchDatayolkContent()
   return (
     <section>
       <div className="flex justify-between items-baseline">
-        <SectionHeader title="Latest · Datayolk · Blog" />
-        {/* <a target="_blank" rel="noreferrer" href={getUTMOutboundPath({ path: 'https://datayolk.net/blog' })}>Visit Datayolk ?</a> */}
+        <SectionHeader title="Datayolk · Blog" />
+        <More path={getUTMOutboundPath({ path: 'https://datayolk.net/blog' })} />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
         {datayolkQuery.status !== "success" && (

@@ -1,10 +1,7 @@
-import type { NextPage } from 'next'
-import { TBio } from '../constant-enum-type/Strapi'
-import dynamic from 'next/dynamic'
-import { NextSeo } from 'next-seo'
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
-import { BioState } from '../store'
-import { useEffect } from 'react'
+import type { NextPage } from 'next';
+import { TBio } from '../constant-enum-type/Strapi';
+import dynamic from 'next/dynamic';
+import { NextSeo } from 'next-seo';
 
 const BioContainer = dynamic(import('../features/BioContainer'));
 const GithubContainer = dynamic(import('../features/GithubContainer'));
@@ -16,7 +13,7 @@ export async function getServerSideProps() {
   if (!Biodata) {
     return {
       redirect: {
-        destination: '/',
+        destination: '/404',
         permanent: false,
       },
     }
@@ -31,10 +28,6 @@ interface HomeProps {
 }
 
 const Home: NextPage<HomeProps> = ({ Biodata }) => {
-  const setBio = useSetRecoilState(BioState)
-  useEffect(() => {
-    setBio(Biodata);
-  }, [])
   const SEO = {
     description: Biodata.bio
   }

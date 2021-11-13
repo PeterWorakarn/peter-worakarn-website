@@ -8,7 +8,7 @@ export function fetchGithubUserInfo(name: string): Promise<TGithubUserInfo> {
   return api.get(`https://api.github.com/users/${name}`).then((data) => data.data);
 }
 export function fetchGithubUserRepos(name: string): Promise<TGithubUserRepos> {
-  return api.get(`https://api.github.com/users/${name}/repos`).then((data) => data.data);
+  return api.get(`https://api.github.com/users/${name}/repos?sort=updated`).then((data) => data.data);
 }
 export function fetchGithubReposReadMe(name: string, project_name: string): Promise<TGithubReposReadMe> {
   return api.get(`https://raw.githubusercontent.com/${name}/${project_name}/master/README.md`);

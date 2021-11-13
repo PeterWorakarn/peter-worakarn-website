@@ -1,4 +1,5 @@
-const siteUrl = "https://www.capsules.com";
+export const siteUrl = "https://www.capsules.com";
+export const siteUrlDisplay = "capsules.com";
 
 module.exports = {
   siteUrl,

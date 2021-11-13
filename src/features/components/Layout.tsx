@@ -2,8 +2,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from 'next/dist/client/router';
 import dynamic from "next/dynamic";
 import Link from 'next/link';
+import { useEffect } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { BioState } from "../../store";
+import useFetchAllBio from "../hooks/Strapi/useFetchAllBio";
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
@@ -16,7 +18,12 @@ const Header = dynamic(import('./Header'));
 
 const Layout: React.FC = (props) => {
   const router = useRouter();
-  const bio = useRecoilValue(BioState)
+  const bioQuery = useFetchAllBio(true);
+  const setBio = useSetRecoilState(BioState)
+  useEffect(() => {
+    if (bioQuery.status === 'success' && bioQuery.data)
+      setBio(bioQuery.data);
+  }, [bioQuery]);
   return (
     <div id="layout" className="max-w-5xl mx-auto selection:text-white selection:bg-primary_blue">
       <Header />
@@ -42,7 +49,12 @@ const Layout: React.FC = (props) => {
           {props.children}
         </motion.section>
       </AnimatePresence>
-      <Footer shortName={bio.Short_name} contact={bio.contact} />
+      {
+        bioQuery.status === 'success' && bioQuery.data ? (
+          <Footer shortName={bioQuery.data.Short_name} contact={bioQuery.data.contact} />
+        ) : <>loading..</>
+      }
+
     </div>
   );
 };

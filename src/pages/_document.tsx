@@ -3,17 +3,6 @@ import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/do
 import { ServerStyleSheet } from 'styled-components';
 import { gaTrackingCode } from '../configs';
 
-// window.location.pathname
-// const customStylePage = (pathname: string) => {
-//   switch (pathname) {
-//     case '/resume':
-//       return 'resume'
-//       break;
-//     default:
-//       return null;
-//       break;
-//   }
-// }
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
@@ -46,7 +35,7 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#455AFB" />
         </Head>
-        <body className="resume scorll_bar bg-app_dark">
+        <body style={{scrollSnapType: 'y proximity'}}  className="resume scorll_bar bg-app_dark">
           <Main />
           <NextScript />
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingCode}`} />

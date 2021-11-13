@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header: React.FC = (props) => {
   return (
-    <header className="flex justify-end py-5 px-5 sm:px-0">
+    <header className="flex justify-end py-5 px-5">
       <Link prefetch={false} href="/resume">
         <a className="text-sm text-white font-sans_english flex gap-2 py-1 px-3 bg-typo-minor rounded-full">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
