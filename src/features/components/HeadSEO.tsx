@@ -27,13 +27,13 @@ const HeadSEO: React.FC = () => {
         },
         {
           rel: 'apple-touch-icon',
-          href: '/vercel.svg',
+          href: '/icons/apple-touch-icon.png',
           sizes: '76x76'
         },
-        // {
-        //   rel: 'manifest',
-        //   href: '/manifest.json'
-        // }
+        {
+          rel: 'manifest',
+          href: '/manifest.json'
+        }
       ],
     openGraph: {
       images: [
