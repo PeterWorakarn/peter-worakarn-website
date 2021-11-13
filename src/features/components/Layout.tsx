@@ -1,20 +1,22 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from 'next/dist/client/router';
 import dynamic from "next/dynamic";
-import Link from 'next/link';
 import { useEffect } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { BioState } from "../../store";
 import useFetchAllBio from "../hooks/Strapi/useFetchAllBio";
 
 const variants = {
-  hidden: { opacity: 0, x: -200, y: 0 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: 0, y: -100 },
+  hidden: { opacity: 0 },
+  enter: { opacity: 1 },
+  exit: { opacity: 0 },
+  // hidden: { opacity: 0, x: -200, y: 0 },
+  // enter: { opacity: 1, x: 0, y: 0 },
+  // exit: { opacity: 0, x: 0, y: -100 },
 }
 
-const Footer = dynamic(import('./Footer'));
-const Header = dynamic(import('./Header'));
+const Footer = dynamic(import('./Footer'), { ssr: false});
+const Header = dynamic(import('./Header'), { ssr: false});
 
 const Layout: React.FC = (props) => {
   const router = useRouter();

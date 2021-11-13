@@ -4,11 +4,11 @@ import dynamic from 'next/dynamic';
 import { UseQueryResult } from "react-query"
 import { TWordpressRESTAPI } from "../constant-enum-type/Wordpress"
 import moment from "moment-timezone"
-import { DATAYOLK_CONTENT_LENGTH, getUTMOutboundPath, PLACEHOLDER_IMAGE, THUMBNAIL_HEIGHT, THUMBNAIL_WIDTH } from "../configs"
+import { DATAYOLK_CONTENT_LENGTH, getUTMOutboundPath, PLACEHOLDER_IMAGE } from "../configs"
 
-const ArticleSkeleton = dynamic(import('../features/components/skeletons/ArticleSkeleton'));
-const SectionHeader = dynamic(import('../features/components/SectionHeader'));
-const More = dynamic(import('../features/components/More'));
+const ArticleSkeleton = dynamic(import('../features/components/skeletons/ArticleSkeleton'), {ssr: false});
+const SectionHeader = dynamic(import('../features/components/SectionHeader'), {ssr: false});
+const More = dynamic(import('../features/components/More'), {ssr: false});
 
 const DatayolkContainer: React.FC = () => {
   const datayolkQuery: UseQueryResult<TWordpressRESTAPI, unknown> = useFetchDatayolkContent()

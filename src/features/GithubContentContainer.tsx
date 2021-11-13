@@ -1,4 +1,3 @@
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const GithubContentContainer: React.FC = () => {

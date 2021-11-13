@@ -1,4 +1,3 @@
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import moment from "moment-timezone";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
@@ -10,9 +9,9 @@ import { BioState } from "../store";
 import useFetchGithubUserRepos from "./hooks/Github/useFetchGithubUserRepos";
 import { randomColor } from "./utils/random-color";
 
-const CardSkeleton = dynamic(import('../features/components/skeletons/CardSkeleton'));
-const SectionHeader = dynamic(import('./components/SectionHeader'));
-const More = dynamic(import('../features/components/More'));
+const CardSkeleton = dynamic(import('../features/components/skeletons/CardSkeleton'), {ssr: false});
+const SectionHeader = dynamic(import('./components/SectionHeader'), {ssr: false});
+const More = dynamic(import('../features/components/More'), {ssr: false});
 
 const GithubContainer: React.FC = () => {
   const bio = useRecoilValue(BioState);
