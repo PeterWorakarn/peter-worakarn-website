@@ -1,5 +1,4 @@
 import { useRecoilValue } from "recoil";
-import { siteUrlDisplay } from "../../../next-sitemap";
 import { getUTMOutboundPath } from "../../configs";
 import { BioState } from "../../store";
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
