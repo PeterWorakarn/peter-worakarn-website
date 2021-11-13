@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
 import type { NextPage } from 'next';
 
-const Back = dynamic(import('../features/components/Back'));
-const FAB = dynamic(import('../features/components/FAB'));
-const ResumeContainer = dynamic(import('../features/ResumeContainer'));
+const Back = dynamic(import('../features/components/Back'), {ssr: false});
+const FAB = dynamic(import('../features/components/FAB'), {ssr: false});
+const ResumeContainer = dynamic(import('../features/ResumeContainer'), {ssr: false});
 
 const ResumePage: NextPage = () => {
   return (

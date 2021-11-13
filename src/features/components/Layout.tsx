@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from 'next/dist/client/router';
 import dynamic from "next/dynamic";
-import Link from 'next/link';
 import { useEffect } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { BioState } from "../../store";
@@ -13,8 +12,8 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -100 },
 }
 
-const Footer = dynamic(import('./Footer'));
-const Header = dynamic(import('./Header'));
+const Footer = dynamic(import('./Footer'), {ssr: false});
+const Header = dynamic(import('./Header'), {ssr: false});
 
 const Layout: React.FC = (props) => {
   const router = useRouter();

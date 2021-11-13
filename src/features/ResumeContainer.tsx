@@ -5,11 +5,9 @@ import useFetchAllBio from "./hooks/Strapi/useFetchAllBio";
 import useFetchAllEducation from "./hooks/Strapi/useFetchAllEducation";
 import useFetchAllJob from "./hooks/Strapi/useFetchAllJob";
 import useFetchCurrentJob from "./hooks/Strapi/useFetchCurrentJob";
-// import SkeletonsElement from "./components/skeletons/SkeletonsElement";
 import dynamic from "next/dynamic";
-import { AnimatePresence } from "framer-motion";
 
-const SkeletonsElement = dynamic(import('./components/skeletons/SkeletonsElement'));
+const SkeletonsElement = dynamic(import('./components/skeletons/SkeletonsElement'), {ssr: false});
 
 const ResumeContainer: React.FC = () => {
   const [isEnable, setIsEnable] = useState(false);

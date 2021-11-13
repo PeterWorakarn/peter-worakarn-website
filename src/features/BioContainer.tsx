@@ -1,6 +1,5 @@
-import { AnimatePresence, motion, useMotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 import moment from "moment-timezone";
-import dynamic from "next/dynamic";
 import ReactMarkdown from "react-markdown";
 import { TBio } from "../constant-enum-type/Strapi";
 import HeroImage from '../../public/3D-Hero-minify.webp';
