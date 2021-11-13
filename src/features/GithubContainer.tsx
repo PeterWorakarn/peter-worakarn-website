@@ -1,4 +1,3 @@
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import moment from "moment-timezone";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
