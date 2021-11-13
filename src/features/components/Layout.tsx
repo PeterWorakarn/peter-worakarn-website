@@ -25,7 +25,7 @@ const Layout: React.FC = (props) => {
       setBio(bioQuery.data);
   }, [bioQuery]);
   return (
-    <div id="layout" className="max-w-5xl mx-auto selection:text-white selection:bg-primary_blue">
+    <div id="layout" className="max-w-2xl lg:max-w-5xl mx-auto selection:text-white selection:bg-primary_blue">
       <Header />
       <AnimatePresence
         exitBeforeEnter
@@ -41,7 +41,8 @@ const Layout: React.FC = (props) => {
           key={router.pathname}
           className=" 
           bg-app_dark 
-          p-5 
+          px-5
+          pb-5 
           sm:py-8 
           w-full 
           min-h-screen

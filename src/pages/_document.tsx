@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#455AFB" />
         </Head>
-        <body style={{scrollSnapType: 'y proximity'}}  className="resume scorll_bar bg-app_dark">
+        <body style={{scrollSnapType: 'y proximity'}}  className="resume scorll_bar overflow-x-hidden bg-app_dark">
           <Main />
           <NextScript />
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingCode}`} />
