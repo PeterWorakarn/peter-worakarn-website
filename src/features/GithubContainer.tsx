@@ -9,9 +9,9 @@ import { BioState } from "../store";
 import useFetchGithubUserRepos from "./hooks/Github/useFetchGithubUserRepos";
 import { randomColor } from "./utils/random-color";
 
-const CardSkeleton = dynamic(import('../features/components/skeletons/CardSkeleton'), {ssr: true});
-const SectionHeader = dynamic(import('./components/SectionHeader'), {ssr: true});
-const More = dynamic(import('../features/components/More'), {ssr: true});
+const CardSkeleton = dynamic(import('../features/components/skeletons/CardSkeleton'), {ssr: false});
+const SectionHeader = dynamic(import('./components/SectionHeader'), {ssr: false});
+const More = dynamic(import('../features/components/More'), {ssr: false});
 
 const GithubContainer: React.FC = () => {
   const bio = useRecoilValue(BioState);

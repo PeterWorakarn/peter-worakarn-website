@@ -8,9 +8,9 @@ import { useRouter } from 'next/dist/client/router';
 import { gaTrackingCode } from '../configs';
 import dynamic from 'next/dynamic';
 
-const HeadSEO = dynamic(import('../features/components/HeadSEO'), {ssr: true});
-const Layout = dynamic(import('../features/components/Layout'), {ssr: true});
-const Providers = dynamic(import('../features/Providers'), {ssr: true});
+const HeadSEO = dynamic(import('../features/components/HeadSEO'), {ssr: false});
+const Layout = dynamic(import('../features/components/Layout'), {ssr: false});
+const Providers = dynamic(import('../features/Providers'), {ssr: false});
 
 
 initializeMoment();
