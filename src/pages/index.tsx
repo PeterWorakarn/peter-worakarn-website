@@ -3,7 +3,7 @@ import { TBio } from '../constant-enum-type/Strapi';
 import dynamic from 'next/dynamic';
 import { NextSeo } from 'next-seo';
 
-const BioContainer = dynamic(import('../features/BioContainer'), {ssr: true});
+const BioContainer = dynamic(import('../features/BioContainer'), {ssr: false});
 const GithubContainer = dynamic(import('../features/GithubContainer'), {ssr: false});
 const DatayolkContainer = dynamic(import('../features/DatayolkContainer'), {ssr: false});
 
