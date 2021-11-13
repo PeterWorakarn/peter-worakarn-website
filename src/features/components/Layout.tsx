@@ -15,8 +15,8 @@ const variants = {
   // exit: { opacity: 0, x: 0, y: -100 },
 }
 
-const Footer = dynamic(import('./Footer'), { ssr: false});
-const Header = dynamic(import('./Header'), { ssr: false});
+const Footer = dynamic(import('./Footer'), { ssr: true});
+const Header = dynamic(import('./Header'), { ssr: true});
 
 const Layout: React.FC = (props) => {
   const router = useRouter();

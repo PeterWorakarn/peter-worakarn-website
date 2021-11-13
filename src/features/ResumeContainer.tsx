@@ -7,7 +7,7 @@ import useFetchAllJob from "./hooks/Strapi/useFetchAllJob";
 import useFetchCurrentJob from "./hooks/Strapi/useFetchCurrentJob";
 import dynamic from "next/dynamic";
 
-const SkeletonsElement = dynamic(import('./components/skeletons/SkeletonsElement'), {ssr: false});
+const SkeletonsElement = dynamic(import('./components/skeletons/SkeletonsElement'), {ssr: true});
 
 const ResumeContainer: React.FC = () => {
   const [isEnable, setIsEnable] = useState(false);

@@ -3,9 +3,9 @@ import { TBio } from '../constant-enum-type/Strapi';
 import dynamic from 'next/dynamic';
 import { NextSeo } from 'next-seo';
 
-const BioContainer = dynamic(import('../features/BioContainer'), {ssr: false});
-const GithubContainer = dynamic(import('../features/GithubContainer'), {ssr: false});
-const DatayolkContainer = dynamic(import('../features/DatayolkContainer'), {ssr: false});
+const BioContainer = dynamic(import('../features/BioContainer'), {ssr: true});
+const GithubContainer = dynamic(import('../features/GithubContainer'), {ssr: true});
+const DatayolkContainer = dynamic(import('../features/DatayolkContainer'), {ssr: true});
 
 export async function getServerSideProps() {
   const res = await fetch('https://peter.datayolk.net/peter-bio')
