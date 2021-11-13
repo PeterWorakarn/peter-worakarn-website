@@ -10,8 +10,9 @@ export type TGithubUserRepos = {
   name: string;
   full_name: string; // path param
   description:string;
+  html_url:string;
   homepage?: string;
-  topics?: string[];
+  topics: string[];
   language?: string;
   created_at: string;
 }[];

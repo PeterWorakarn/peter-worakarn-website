@@ -41,3 +41,51 @@
   font-weight: 600;
   src:  url('/fonts/Inter/Inter-Bold.ttf') format("truetype");
 }
+
+/* ThaiSansNeue */
+@font-face {
+  font-family: ThaiSansNeue;
+  font-weight: 300;
+  src:  url('/fonts/ThaiSansNeue/ThaiSansNeue-Light.otf') format("opentype"),
+        url('/fonts/ThaiSansNeue/ThaiSansNeue-Light.ttf') format("truetype");
+}
+@font-face {
+  font-family: ThaiSansNeue;
+  font-weight: 400;
+  src:  url('/fonts/ThaiSansNeue/ThaiSansNeue-Reqular.otf') format("opentype"),
+        url('/fonts/ThaiSansNeue/ThaiSansNeue-Regular.ttf') format("truetype");
+}
+@font-face {
+  font-family: ThaiSansNeue;
+  font-weight: 500;
+  src:  url('/fonts/ThaiSansNeue/ThaiSansNeue-SemiBold.otf') format("opentype"),
+        url('/fonts/ThaiSansNeue/ThaiSansNeue-SemiBold.ttf') format("truetype");
+}
+@font-face {
+  font-family: ThaiSansNeue;
+  font-weight: 600;
+  src:  url('/fonts/ThaiSansNeue/ThaiSansNeue-Bold.otf') format("opentype"),
+        url('/fonts/ThaiSansNeue/ThaiSansNeue-Bold.ttf') format("truetype");
+}
+
+/* Sarabun */
+@font-face {
+  font-family: Sarabun;
+  font-weight: 300;
+  src:  url('/fonts/Sarabun/Sarabun-Light.ttf') format("truetype");
+}
+@font-face {
+  font-family: Sarabun;
+  font-weight: 400;
+  src:  url('/fonts/Sarabun/Sarabun-Medium.ttf') format("truetype");
+}
+@font-face {
+  font-family: Sarabun;
+  font-weight: 500;
+  src:  url('/fonts/Sarabun/Sarabun-SemiBold.ttf') format("truetype");
+}
+@font-face {
+  font-family: Sarabun;
+  font-weight: 600;
+  src:  url('/fonts/Sarabun/Sarabun-Bold.ttf') format("truetype");
+}

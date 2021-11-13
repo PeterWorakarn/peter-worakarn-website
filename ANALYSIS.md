@@ -16,7 +16,9 @@ ResumePage/
 | Name | Description | Props |
 | ----------- | ----------- | ----------- |
 | FAB | Float Action Button | text, icon, action |
-| SkeletonsElement | Skeleton loading | width, height |
+| Back | Back Button | path |
+| SkeletonsElement | Skeleton loading | margin?, width, height |
+| ArticleSkeletonsElement | Skeleton loading | - |
 
 ### Variable name
 ---
