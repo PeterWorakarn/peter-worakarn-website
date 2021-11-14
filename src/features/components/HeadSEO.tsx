@@ -18,7 +18,7 @@ const HeadSEO: React.FC = () => {
   const overideSEO = {
     titleTemplate: "%s – Peter O.",
     title: transformPath(router.pathname === '/' ? 'Home' : router.pathname),
-    canonical: "https://peter-o.tech",
+    canonical: router.basePath,
     description: "Personal Website of Peter O.",
     additionalLinkTags:
       [
@@ -37,15 +37,16 @@ const HeadSEO: React.FC = () => {
         }
       ],
     openGraph: {
+      description: 'Personal Website of Peter O.',
       images: [
         {
-          url: 'https://peter-o.tech/OG-Peter-O.svg',
+          url: `${router.basePath}/OG-Peter-O.svg`,
           width: 800,
           height: 600,
           alt: 'Peter O.',
         },
       ],
-      url: 'https://peter-o.tech',
+      url: router.basePath,
       type: 'website',
       locale: 'en_IE',
       site_name: 'Peter O.',
@@ -54,7 +55,7 @@ const HeadSEO: React.FC = () => {
       cardType: 'summary_large_image',
       title: 'Peter O',
       description: 'Personal Website of Peter O.',
-      image: 'https://peter-o.tech/OG-Peter-O.svg',
+      image: `${router.basePath}/OG-Peter-O.svg`,
     },
   };
   return (

@@ -29,7 +29,13 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ Biodata }) => {
   const SEO = {
-    description: Biodata.bio
+    description: Biodata.bio,
+    openGraph: {
+      description: Biodata.bio,
+    },
+    twitter: {
+      description: Biodata.bio,
+    }
   }
   return (
     <div className="flex flex-col gap-40">
