@@ -12,7 +12,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = (props) => {
   const bio = useRecoilValue(BioState);
   return (
-    <footer className="my-10 px-5">
+    <footer className="block my-10 px-5 print:hidden">
       <hr className="h-0.5 w-8 border-none bg-typo-minor text-typo-minor mb-5" />
       <div className="text-typo-minor font-sans_english font-normal container py-2 mx-auto flex items-center justify-between flex-row">
         <p className="text-lg">{bio.Short_name}</p>
