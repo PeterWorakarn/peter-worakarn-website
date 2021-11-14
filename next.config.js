@@ -7,7 +7,6 @@
 //   ...
 // })
 module.exports = {
-  basePath:"https://peter-o.tech",
   experimental: {
     concurrentFeatures: true,
     serverComponents: true
