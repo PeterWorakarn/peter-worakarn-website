@@ -40,6 +40,12 @@ const HeadSEO: React.FC = () => {
       description: 'Personal Website of Peter O.',
       images: [
         {
+          url: `https://peter-o.tech/OG-Peter-O.png`,
+          width: 800,
+          height: 600,
+          alt: 'Peter O.',
+        },
+        {
           url: `https://peter-o.tech/OG-Peter-O.svg`,
           width: 800,
           height: 600,
