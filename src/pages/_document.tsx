@@ -34,6 +34,7 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#455AFB" />
+          <meta name="og:title" content="Peter O" />
           <meta name="og:image" content="https://peter-o.tech/OG-Peter-O.png" />
           <meta name="og:width" content="800" />
           <meta name="og:height" content="600" />
