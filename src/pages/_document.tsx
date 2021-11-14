@@ -36,6 +36,7 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#455AFB" />
           <meta property="og:description" content="I'm a self-taught web developer with design background in Thailand. For my weekend, I usually write articles about Data and Technology in Datayolk.net"></meta>
           <meta property="og:image" content="https://peter-o.tech/OG-Peter-O.svg"></meta>
+          <meta property="og:image" content="/OG-Peter-O.svg"></meta>
           <meta property="og:image:width" content="800"></meta>
           <meta property="og:image:height" content="600"></meta>
         </Head>
