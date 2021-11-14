@@ -33,9 +33,6 @@ const Home: NextPage<HomeProps> = ({ Biodata }) => {
     openGraph: {
       description: Biodata.bio,
     },
-    twitter: {
-      description: Biodata.bio,
-    }
   }
   return (
     <div className="flex flex-col gap-40">
