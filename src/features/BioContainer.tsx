@@ -31,7 +31,7 @@ const BioContainer: React.FC<BioProps> = (props) => {
   }, [lastY])
 
   return (
-    <section className="flex flex-col justify-end lg:justify-start h-[80vh] sm:h-auto lg:h-[70vh] 2xl:h-auto">
+    <section className="flex flex-col justify-end lg:justify-around h-[80vh] sm:h-auto lg:h-[70vh] 2xl:h-auto">
       <Head>
         <link
           rel="preload"
