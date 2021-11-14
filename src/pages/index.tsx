@@ -7,7 +7,7 @@ const BioContainer = dynamic(import('../features/BioContainer'), {ssr: true});
 const GithubContainer = dynamic(import('../features/GithubContainer'), {ssr: false});
 const DatayolkContainer = dynamic(import('../features/DatayolkContainer'), {ssr: false});
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch('https://peter.datayolk.net/peter-bio')
   const Biodata: TBio = await res.json()
   if (!Biodata) {
