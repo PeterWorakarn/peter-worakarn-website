@@ -34,6 +34,7 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#455AFB" />
+          <meta name="og:image" content="https://peter-o.tech/OG-Peter-O.png" />
         </Head>
         <body style={{scrollSnapType: 'y proximity'}}  className="resume scorll_bar overflow-x-hidden bg-app_dark">
           <Main />
