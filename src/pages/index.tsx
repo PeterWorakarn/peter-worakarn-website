@@ -7,7 +7,7 @@ const BioContainer = dynamic(import('../features/BioContainer'), {ssr: true});
 const GithubContainer = dynamic(import('../features/GithubContainer'), {ssr: false});
 const DatayolkContainer = dynamic(import('../features/DatayolkContainer'), {ssr: false});
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch('https://peter.datayolk.net/peter-bio')
   const Biodata: TBio = await res.json()
   if (!Biodata) {
@@ -19,8 +19,12 @@ export async function getServerSideProps() {
     }
   }
 
-  return { props: { Biodata } }
-  // Pass data to the page via props
+  return { 
+    // Pass data to the page via props
+    // Incremental   Static  Regeneration
+    revalidate: 1,
+    props: { Biodata } 
+  }
 }
 
 interface HomeProps {
