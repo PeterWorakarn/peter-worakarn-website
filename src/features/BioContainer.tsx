@@ -5,7 +5,6 @@ import { TBio } from "../constant-enum-type/Strapi";
 import HeroImage from '../../public/3D-Hero-minify.webp';
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Head from "next/head";
 
 interface BioProps {
   data: TBio;
@@ -32,13 +31,6 @@ const BioContainer: React.FC<BioProps> = (props) => {
 
   return (
     <section className="flex flex-col justify-end lg:justify-around h-[80vh] sm:h-auto lg:h-[70vh] 2xl:h-auto">
-      <Head>
-        <link
-          rel="preload"
-          href={`${HeroImage}`}
-          as="image"
-        />
-      </Head>
       <AnimatePresence exitBeforeEnter initial={true}>
         <motion.div
           initial={{ rotate: 15, opacity: 0 }}

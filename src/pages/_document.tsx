@@ -34,12 +34,19 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#455AFB" />
+          <meta name="og:title" content="Peter O" />
+          <meta name="og:image" content="https://peter-o.tech/OG-Peter-O.png" />
+          <meta name="og:width" content="800" />
+          <meta name="og:height" content="600" />
+          <meta name="og:description" content="I'm a self-taught web developer with design background in Thailand. For my weekend, I usually write articles about Data and Technology in Datayolk.net" />
+          <meta name="google-site-verification" content="RRZfDeXabtlJLdFYUrvBmJH6YWUbv8NCoughR9CFoEU" />
         </Head>
-        <body style={{scrollSnapType: 'y proximity'}}  className="resume scorll_bar overflow-x-hidden bg-app_dark">
+        <body style={{ scrollSnapType: 'y proximity' }} className="resume scorll_bar overflow-x-hidden bg-app_dark">
           <Main />
           <NextScript />
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingCode}`} />
+          <script defer src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingCode}`} />
           <script
+            defer
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];

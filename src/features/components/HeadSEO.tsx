@@ -1,4 +1,5 @@
 import { NextSeo, SocialProfileJsonLd } from 'next-seo';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import extractPathName from '../utils/extractPath';
 import titleCase from '../utils/titleCase';
@@ -17,7 +18,7 @@ const HeadSEO: React.FC = () => {
   const overideSEO = {
     titleTemplate: "%s – Peter O.",
     title: transformPath(router.pathname === '/' ? 'Home' : router.pathname),
-    canonical: router.asPath,
+    canonical: router.route,
     description: "Personal Website of Peter O.",
     additionalLinkTags:
       [
@@ -36,21 +37,25 @@ const HeadSEO: React.FC = () => {
         }
       ],
     openGraph: {
+      description: 'Personal Website of Peter O.',
       images: [
         {
-          url: '/OG-Peter-O.svg',
+          url: `https://peter-o.tech/OG-Peter-O.svg`,
           width: 800,
           height: 600,
           alt: 'Peter O.',
         },
       ],
-      url: router.asPath,
+      url: 'https://peter-o.tech',
       type: 'website',
       locale: 'en_IE',
       site_name: 'Peter O.',
     },
     twitter: {
       cardType: 'summary_large_image',
+      title: 'Peter O',
+      description: 'Personal Website of Peter O.',
+      image: `https://peter-o.tech/OG-Peter-O.svg`,
     },
   };
   return (

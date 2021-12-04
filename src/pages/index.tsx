@@ -7,7 +7,7 @@ const BioContainer = dynamic(import('../features/BioContainer'), {ssr: true});
 const GithubContainer = dynamic(import('../features/GithubContainer'), {ssr: false});
 const DatayolkContainer = dynamic(import('../features/DatayolkContainer'), {ssr: false});
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch('https://peter.datayolk.net/peter-bio')
   const Biodata: TBio = await res.json()
   if (!Biodata) {
@@ -29,7 +29,10 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ Biodata }) => {
   const SEO = {
-    description: Biodata.bio
+    description: Biodata.bio,
+    openGraph: {
+      description: Biodata.bio,
+    },
   }
   return (
     <div className="flex flex-col gap-40">
