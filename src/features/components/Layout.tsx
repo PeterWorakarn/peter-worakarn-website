@@ -39,7 +39,10 @@ const Layout: React.FC = (props) => {
           animate="enter"
           exit="exit"
           variants={variants}
-          transition={{ type: 'tween' }}
+          transition={{ 
+            type: 'tween',
+            delay: 0.25, 
+          }}
           key={router.pathname}
           className=" 
           bg-app_dark 
