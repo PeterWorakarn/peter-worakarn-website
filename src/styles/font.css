@@ -3,21 +3,25 @@
   font-family: NotoSerifDisplay;
   font-weight: 300;
   src:  url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Light.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: NotoSerifDisplay;
   font-weight: 400;
   src:  url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Medium.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: NotoSerifDisplay;
   font-weight: 500;
   src:  url('/fonts/NotoSerifDisplay/NotoSerifDisplay-SemiBold.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: NotoSerifDisplay;
   font-weight: 600;
   src:  url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.ttf') format("truetype");
+  font-display: swap;
 }
 
 /* Inter */
@@ -25,21 +29,25 @@
   font-family: Inter;
   font-weight: 300;
   src:  url('/fonts/Inter/Inter-Light.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: Inter;
   font-weight: 400;
   src:  url('/fonts/Inter/Inter-Medium.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: Inter;
   font-weight: 500;
   src:  url('/fonts/Inter/Inter-SemiBold.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: Inter;
   font-weight: 600;
   src:  url('/fonts/Inter/Inter-Bold.ttf') format("truetype");
+  font-display: swap;
 }
 
 /* ThaiSansNeue */
@@ -47,25 +55,29 @@
   font-family: ThaiSansNeue;
   font-weight: 300;
   src:  url('/fonts/ThaiSansNeue/ThaiSansNeue-Light.otf') format("opentype"),
-        url('/fonts/ThaiSansNeue/ThaiSansNeue-Light.ttf') format("truetype");
+  url('/fonts/ThaiSansNeue/ThaiSansNeue-Light.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: ThaiSansNeue;
   font-weight: 400;
   src:  url('/fonts/ThaiSansNeue/ThaiSansNeue-Reqular.otf') format("opentype"),
-        url('/fonts/ThaiSansNeue/ThaiSansNeue-Regular.ttf') format("truetype");
+  url('/fonts/ThaiSansNeue/ThaiSansNeue-Regular.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: ThaiSansNeue;
   font-weight: 500;
   src:  url('/fonts/ThaiSansNeue/ThaiSansNeue-SemiBold.otf') format("opentype"),
-        url('/fonts/ThaiSansNeue/ThaiSansNeue-SemiBold.ttf') format("truetype");
+  url('/fonts/ThaiSansNeue/ThaiSansNeue-SemiBold.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: ThaiSansNeue;
   font-weight: 600;
   src:  url('/fonts/ThaiSansNeue/ThaiSansNeue-Bold.otf') format("opentype"),
-        url('/fonts/ThaiSansNeue/ThaiSansNeue-Bold.ttf') format("truetype");
+  url('/fonts/ThaiSansNeue/ThaiSansNeue-Bold.ttf') format("truetype");
+  font-display: swap;
 }
 
 /* Sarabun */
@@ -73,19 +85,23 @@
   font-family: Sarabun;
   font-weight: 300;
   src:  url('/fonts/Sarabun/Sarabun-Light.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: Sarabun;
   font-weight: 400;
   src:  url('/fonts/Sarabun/Sarabun-Medium.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: Sarabun;
   font-weight: 500;
   src:  url('/fonts/Sarabun/Sarabun-SemiBold.ttf') format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: Sarabun;
   font-weight: 600;
   src:  url('/fonts/Sarabun/Sarabun-Bold.ttf') format("truetype");
+  font-display: swap;
 }
