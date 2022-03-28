@@ -44,18 +44,6 @@ export default class MyDocument extends Document {
         <body style={{ scrollSnapType: 'y proximity' }} className="resume scorll_bar overflow-x-hidden bg-app_dark">
           <Main />
           <NextScript />
-          <script defer src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingCode}`} />
-          <script
-            defer
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-              
-                gtag('config', '${gaTrackingCode}');`,
-            }}
-          />
         </body>
       </Html>
     );
