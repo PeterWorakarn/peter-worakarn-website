@@ -6,9 +6,9 @@ import { TWordpressRESTAPI } from "../constant-enum-type/Wordpress"
 import moment from "moment-timezone"
 import { DATAYOLK_CONTENT_LENGTH, getUTMOutboundPath, PLACEHOLDER_IMAGE } from "../configs"
 
-const ArticleSkeleton = dynamic(import('../features/components/skeletons/ArticleSkeleton'), {ssr: false});
-const SectionHeader = dynamic(import('../features/components/SectionHeader'), {ssr: false});
-const More = dynamic(import('../features/components/More'), {ssr: false});
+const ArticleSkeleton = dynamic(import('../features/components/skeletons/ArticleSkeleton'), { ssr: false });
+const SectionHeader = dynamic(import('../features/components/SectionHeader'), { ssr: false });
+const More = dynamic(import('../features/components/More'), { ssr: false });
 
 const DatayolkContainer: React.FC = () => {
   const datayolkQuery: UseQueryResult<TWordpressRESTAPI, unknown> = useFetchDatayolkContent()
@@ -40,7 +40,7 @@ const DatayolkContainer: React.FC = () => {
                     layout="fill"
                     objectFit='cover'
                     objectPosition="top center"
-                    src={`${eachContent.featured_image.medium}`}
+                    src={`${eachContent.featured_image.large}`}
                     alt={eachContent.title}
                   // width={THUMBNAIL_WIDTH}
                   // height={THUMBNAIL_HEIGHT}
