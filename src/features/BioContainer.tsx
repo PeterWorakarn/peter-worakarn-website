@@ -33,9 +33,9 @@ const BioContainer: React.FC<BioProps> = (props) => {
     <section className="flex flex-col justify-end lg:justify-around h-[80vh] sm:h-auto lg:h-[70vh] 2xl:h-auto">
       <AnimatePresence exitBeforeEnter initial={true}>
         <motion.div
-          initial={{ rotate: 15, opacity: 0 }}
-          animate={{ rotate: !shouldAnimate ? 15 : 0, opacity: 1 }}
-          exit={{opacity:0}}
+          initial={{ rotate: 0, opacity: 0 }}
+          animate={{ rotate: !shouldAnimate ? 0 : 0, opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ rotate: { duration: 0.2 } }}
           className="hero-image-container mx-auto z-0 lg:absolute 2xl:hidden top-10 sm:-right-1 md:right-0 ">
           <Image
