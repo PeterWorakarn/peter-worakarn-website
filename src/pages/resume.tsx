@@ -9,8 +9,8 @@ const ResumeContainer = dynamic(import('../features/ResumeContainer'), { ssr: fa
 const onPrintTrack = () => {
   TagManager.dataLayer({
     dataLayer: {
-      'event': 'click',
-      'action': 'print'
+      event: 'click',
+      action: 'print'
     }
   })
 }
