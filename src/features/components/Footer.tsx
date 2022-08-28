@@ -18,13 +18,13 @@ const Footer: React.FC<FooterProps> = (props) => {
         <p className="text-lg">{bio.Short_name}</p>
 
         <div className="flex gap-2 items-center justify-center">
-          <a href={`${bio.linkedin}`} target="_blank" rel="noreferrer">
+          <a className="footer__linkedin" href={`${bio.linkedin}`} target="_blank" rel="noreferrer">
             <BsLinkedin className="w-5 h-5" />
           </a>
-          <a href={`${bio.github}`} target="_blank" rel="noreferrer">
+          <a className="footer__github" href={`${bio.github}`} target="_blank" rel="noreferrer">
             <BsGithub className="w-5 h-5" />
           </a>
-          <a href={`mailto:${bio.contact}`} target="_blank" rel="noreferrer">
+          <a className="footer__email" href={`mailto:${bio.contact}`} target="_blank" rel="noreferrer">
             <MdAlternateEmail className="w-6 h-6" />
           </a>
         </div>

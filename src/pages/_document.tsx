@@ -42,6 +42,7 @@ export default class MyDocument extends Document {
           <meta name="google-site-verification" content="RRZfDeXabtlJLdFYUrvBmJH6YWUbv8NCoughR9CFoEU" />
         </Head>
         <body style={{ scrollSnapType: 'y proximity' }} className="resume scorll_bar overflow-x-hidden bg-app_dark">
+
           <Main />
           <NextScript />
         </body>
