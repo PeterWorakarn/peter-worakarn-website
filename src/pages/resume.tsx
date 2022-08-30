@@ -9,7 +9,7 @@ const ResumeContainer = dynamic(import('../features/ResumeContainer'), { ssr: fa
 const onPrintTrack = () => {
   TagManager.dataLayer({
     dataLayer: {
-      event: 'click',
+      event: 'gtm.linkClick',
       action: 'print'
     }
   })
