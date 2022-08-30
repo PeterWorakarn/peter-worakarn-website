@@ -10,6 +10,7 @@ const onPrintTrack = () => {
   TagManager.dataLayer({
     dataLayer: {
       event: 'print',
+      label: 'resume',
       position: 'floating action button',
     }
   })
