@@ -15,7 +15,7 @@ const Providers: React.FC = ({ children }) => {
     <QueryClientProvider client={queryClient}>
       <RecoilRoot>
         {children}
-        <ReactQueryDevtools initialIsOpen={false} />
+        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
       </RecoilRoot>
     </QueryClientProvider>
   );

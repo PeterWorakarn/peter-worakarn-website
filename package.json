@@ -40,7 +40,8 @@
     "react-markdown": "^7.1.0",
     "react-query": "^3.26.0",
     "recoil": "^0.5.2",
-    "styled-components": "^5.3.1"
+    "styled-components": "^5.3.1",
+    "vanilla-cookieconsent": "^2.8.5"
   },
   "devDependencies": {
     "@types/react": "17.0.24",
