@@ -58,6 +58,8 @@ const CookieConsent: React.FC<CookieConsentProps> = (props) => {
               }; expires=' + ${new Date(
                 0,
               ).toUTCString()}`;
+
+            // ALternative Code cc.eraseCookies(['_ga_3JCBS3B628', '_ga']); 
           }
         },
 
