@@ -7,7 +7,7 @@ import useFetchAllJob from "./hooks/Strapi/useFetchAllJob";
 import useFetchCurrentJob from "./hooks/Strapi/useFetchCurrentJob";
 import dynamic from "next/dynamic";
 
-const SkeletonsElement = dynamic(import('./components/skeletons/SkeletonsElement'), {ssr: false});
+const SkeletonsElement = dynamic(import('./components/skeletons/SkeletonsElement'), { ssr: false });
 
 const ResumeContainer: React.FC = () => {
   const [isEnable, setIsEnable] = useState(false);
@@ -38,12 +38,15 @@ const ResumeContainer: React.FC = () => {
           {bioQuery.status === 'success' && bioQuery.data ? (
             <p>{bioQuery.data.contact}</p>
           ) : <SkeletonsElement key="Contact" width="w-1/4" height="h-[20px]" />}
+          {/* {bioQuery.status === 'success' && bioQuery.data ? (
+            <p>{bioQuery.data.location}</p>
+          ) : <SkeletonsElement key="Location" width="w-1/4" height="h-[20px]" />} */}
+          {bioQuery.status === 'success' && bioQuery.data ? (
+            <p>{bioQuery.data.github}</p>
+          ) : <SkeletonsElement key="GitHub" width="w-1/4" height="h-[20px]" />}
           {bioQuery.status === 'success' && bioQuery.data ? (
             <p>{bioQuery.data.telephone}</p>
           ) : <SkeletonsElement key="Telephone" width="w-1/4" height="h-[20px]" />}
-          {bioQuery.status === 'success' && bioQuery.data ? (
-            <p>{bioQuery.data.location}</p>
-          ) : <SkeletonsElement key="Location" width="w-1/4" height="h-[20px]" />}
         </div>
       </div>
 
@@ -98,7 +101,7 @@ const ResumeContainer: React.FC = () => {
         </div>
         <div className="w-full sm:w-2/3 print:w-2/3 h-auto">
           {educationQuery.status === 'success' && educationQuery.data ? (
-            <>{educationQuery.data.filter(i => i.Highest_education === true).map(each => {
+            <>{educationQuery.data.map(each => {
               return (
                 <div key={each.Degree} className="mb-5 print:mb-5">
                   <h2 className="text-lg font-semibold">{each.School}</h2>
@@ -124,7 +127,7 @@ const ResumeContainer: React.FC = () => {
       </div>
 
       {/* Start Expertise */}
-      <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 mb-8 print:hidden">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 mb-8">
         <div className="w-1/3">
           {bioQuery.status === 'success' && bioQuery.data ? (
             <h2 className="font-medium text-lg">Expertise</h2>
@@ -132,7 +135,7 @@ const ResumeContainer: React.FC = () => {
             <SkeletonsElement key='expertise' width="w-3/4" height="h-[20px]" />
           )}
         </div>
-        <div className="w-2/3 h-auto grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+        <div className="w-2/3 h-auto grid grid-cols-2 sm:grid-cols-4 print:grid-cols-4 print:w-full gap-2 text-left">
           {bioQuery.status === 'success' && bioQuery.data ? (
             <>
               {bioQuery.data.skill_set.map(each => {
