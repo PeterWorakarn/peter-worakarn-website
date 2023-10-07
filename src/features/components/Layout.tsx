@@ -15,8 +15,8 @@ const variants = {
   // exit: { opacity: 0, x: 0, y: -100 },
 }
 
-const Footer = dynamic(import('./Footer'), { ssr: false });
-const Header = dynamic(import('./Header'), { ssr: false });
+const Footer = dynamic(import('./Footer'), { ssr: false});
+const Header = dynamic(import('./Header'), { ssr: false});
 
 const Layout: React.FC = (props) => {
   const router = useRouter();
@@ -39,9 +39,9 @@ const Layout: React.FC = (props) => {
           animate="enter"
           exit="exit"
           variants={variants}
-          transition={{
+          transition={{ 
             type: 'tween',
-            delay: 0.25,
+            delay: 0.25, 
           }}
           key={router.pathname}
           className=" 
@@ -58,7 +58,7 @@ const Layout: React.FC = (props) => {
       {
         bioQuery.status === 'success' && bioQuery.data ? (
           <Footer shortName={bioQuery.data.Short_name} contact={bioQuery.data.contact} />
-        ) : <></>
+        ) : <>loading..</>
       }
 
     </div>
