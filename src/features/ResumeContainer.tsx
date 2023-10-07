@@ -38,9 +38,9 @@ const ResumeContainer: React.FC = () => {
           {bioQuery.status === 'success' && bioQuery.data ? (
             <p>{bioQuery.data.contact}</p>
           ) : <SkeletonsElement key="Contact" width="w-1/4" height="h-[20px]" />}
-          {/* {bioQuery.status === 'success' && bioQuery.data ? (
-            <p>{bioQuery.data.location}</p>
-          ) : <SkeletonsElement key="Location" width="w-1/4" height="h-[20px]" />} */}
+          {bioQuery.status === 'success' && bioQuery.data ? (
+            <p>{bioQuery.data.linkedin}</p>
+          ) : <SkeletonsElement key="Linkedin" width="w-1/4" height="h-[20px]" />}
           {bioQuery.status === 'success' && bioQuery.data ? (
             <p>{bioQuery.data.github}</p>
           ) : <SkeletonsElement key="GitHub" width="w-1/4" height="h-[20px]" />}
@@ -128,14 +128,14 @@ const ResumeContainer: React.FC = () => {
 
       {/* Start Expertise */}
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 mb-8">
-        <div className="w-1/3">
+        <div className="w-full sm:w-1/3">
           {bioQuery.status === 'success' && bioQuery.data ? (
             <h2 className="font-medium text-lg">Expertise</h2>
           ) : (
             <SkeletonsElement key='expertise' width="w-3/4" height="h-[20px]" />
           )}
         </div>
-        <div className="w-2/3 h-auto grid grid-cols-2 sm:grid-cols-4 print:grid-cols-4 print:w-full gap-2 text-left">
+        <div className="w-full sm:w-2/3 h-auto grid grid-cols-2 sm:grid-cols-4 print:grid-cols-4 print:w-full gap-2 text-left">
           {bioQuery.status === 'success' && bioQuery.data ? (
             <>
               {bioQuery.data.skill_set.map(each => {
