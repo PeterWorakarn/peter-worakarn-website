@@ -155,7 +155,7 @@ const CookieConsent: React.FC<CookieConsentProps> = (props) => {
 
   return <button
     data-cc="c-settings"
-    className="cc-link cc-reconsent fixed left-2 bottom-4 rounded-full p-1 grid place-items-center w-10 h-10 shadow-sm border border-gray-50 bg-white">
+    className="cc-link cc-reconsent z-10 fixed left-2 bottom-4 rounded-full p-1 grid place-items-center w-10 h-10 shadow-sm border border-gray-50 bg-white">
     <img src="/icons/cookie.svg" alt="cookie" />
   </button>;
 }
