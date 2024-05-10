@@ -38,6 +38,8 @@ export default class MyDocument extends Document {
           <meta name="og:image" content="https://peter-o.tech/OG-Peter-O.png" />
           <meta name="og:width" content="800" />
           <meta name="og:height" content="600" />
+          <meta name="robots" content="noindex, nofollow" />
+          <meta name="googlebot" content="noindex, nofollow" />
           <meta name="og:description" content="I'm a self-taught web developer with design background in Thailand. For my weekend, I usually write articles about Data and Technology in Datayolk.net" />
         </Head>
         <body style={{ scrollSnapType: 'y proximity' }} className="resume scorll_bar overflow-x-hidden bg-app_dark">
