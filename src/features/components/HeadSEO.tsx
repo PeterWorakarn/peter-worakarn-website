@@ -60,7 +60,7 @@ const HeadSEO: React.FC = () => {
   };
   return (
     <>
-      <NextSeo {...overideSEO} />
+      <NextSeo {...overideSEO} noindex nofollow />
       <SocialProfileJsonLd
         type="Person"
         name="Peter O."
