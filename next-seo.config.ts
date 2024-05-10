@@ -4,6 +4,7 @@ const defaultSeo = {
   title: "Home",
   titleTemplate: "%s – Peter O.",
   description: "Personal Website of Peter O.",
+  dangerouslySetAllPagesToNoIndex: true,
   openGraph: {
     type: 'website',
     locale: 'en_IE',
