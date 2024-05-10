@@ -2,7 +2,7 @@ const siteUrl = "https://www.peter-o.tech";
 
 module.exports = {
   siteUrl,
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
   generateIndexSitemap: true,
   robotsTxtOptions: {
     additionalSitemaps: [
