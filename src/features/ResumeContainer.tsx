@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import moment from "moment-timezone";
 import ReactMarkdown from "react-markdown";
 import useFetchAllBio from "./hooks/Strapi/useFetchAllBio";
@@ -9,19 +9,26 @@ import dynamic from "next/dynamic";
 
 const SkeletonsElement = dynamic(import('./components/skeletons/SkeletonsElement'), { ssr: false });
 
-const ResumeContainer: React.FC = () => {
-  const [isEnable, setIsEnable] = useState(false);
-  setTimeout(() => {
-    setIsEnable(true)
-  }, 1000)
+interface ResumeContainerProps {
+  isEnable?: boolean;
+}
+
+const ResumeContainer: React.FC<ResumeContainerProps> = ({ isEnable: isEnableProp }) => {
+  const [isEnableInternal, setIsEnableInternal] = useState(isEnableProp !== undefined);
+  useEffect(() => {
+    if (isEnableProp !== undefined) return;
+    const t = setTimeout(() => setIsEnableInternal(true), 1000);
+    return () => clearTimeout(t);
+  }, [isEnableProp]);
+  const isEnable = isEnableProp ?? isEnableInternal;
   const bioQuery = useFetchAllBio(isEnable);
   const latestJobQuery = useFetchCurrentJob(isEnable);
   const jobQuery = useFetchAllJob(isEnable);
   const educationQuery = useFetchAllEducation(isEnable);
   return (
-    <article className="flex flex-col bg-opacity-80 bg-app_white backdrop-blur-md border-t-[20px] border-primary_blue border-opacity-25 print:border-none h-full max-w-3xl mx-auto p-10 sm:p-16 print:p-0 rounded-md">
+    <article className="flex flex-col bg-opacity-80 bg-app_white backdrop-blur-md border-t-[20px] border-primary_blue border-opacity-25 w-full print:border-none h-full print:h-auto max-w-3xl mx-auto p-10 sm:p-16 print:p-5 rounded-md">
       {/* Start Header */}
-      <div className="flex flex-col sm:flex-row print:flex-row gap-0 sm:gap-8 mb-12 print:mb-1">
+      <div className="flex flex-col sm:flex-row print:flex-row w-full gap-0 sm:gap-8 mb-12 print:mb-1">
         <div className="w-full sm:w-1/3 print:w-1/3 h-auto ">
           <div className="w-full font-semibold text-4xl text-typo-main">
             {bioQuery.status === 'success' && bioQuery.data ? (
@@ -52,7 +59,7 @@ const ResumeContainer: React.FC = () => {
 
 
       {/* Start Career */}
-      <div className="flex flex-col sm:flex-row print:flex-row gap-2 sm:gap-8 mb-8 print:mb-1">
+      <div className="flex flex-col sm:flex-row print:flex-row w-full gap-2 sm:gap-8 mb-8 print:mb-1">
         <div className="w-full sm:w-1/3 print:w-1/3">
           {jobQuery.status === 'success' && jobQuery.data ? (
             <h2 className="font-medium text-lg">Experience</h2>
@@ -65,7 +72,7 @@ const ResumeContainer: React.FC = () => {
                 <div key={each.Company} className="mb-5 print:mb-5">
                   <h3 className="text-lg font-semibold">{each.Company}, <br className="block sm:hidden" /><i className="font-normal font-sans_english text-primary_blue not-italic capitalize">{each.Title}</i></h3>
                   <p className="text-sm font-normal text-typo-minor">{moment(each.Start_date).format('MMM YYYY')} - {each.Current_job ? <>Current</> : <>{each.End_date ? <>{moment(each.End_date).format('MMM YYYY')}</> : 'Current'}</>} | {each.Location}</p>
-                  <div className="description_markdown prose sm:prose-sm">
+                  <div className="description_markdown prose sm:prose-sm print:prose-xs">
                     <ReactMarkdown>
                       {each.Description}
                     </ReactMarkdown>
@@ -127,15 +134,15 @@ const ResumeContainer: React.FC = () => {
       </div>
 
       {/* Start Expertise */}
-      <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 mb-8">
-        <div className="w-full sm:w-1/3">
+      <div className="flex flex-col sm:flex-row print:flex-row gap-2 sm:gap-8 mb-8 print:mb-1">
+        <div className="w-full sm:w-1/3 print:w-1/3">
           {bioQuery.status === 'success' && bioQuery.data ? (
             <h2 className="font-medium text-lg">Expertise</h2>
           ) : (
             <SkeletonsElement key='expertise' width="w-3/4" height="h-[20px]" />
           )}
         </div>
-        <div className="w-full sm:w-2/3 h-auto grid grid-cols-2 sm:grid-cols-4 print:grid-cols-4 print:w-full gap-2 text-left">
+        <div className="w-full sm:w-2/3 print:w-2/3 h-auto grid grid-cols-2 sm:grid-cols-4 print:grid-cols-4 gap-2 text-left">
           {bioQuery.status === 'success' && bioQuery.data ? (
             <>
               {bioQuery.data.skill_set.map(each => {

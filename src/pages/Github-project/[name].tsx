@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import { useRouter } from 'next/dist/client/router'
-import Head from 'next/head'
 import useFetchGithubReposReadMe from '../../features/hooks/Github/useFetchGithubReposReadMe'
 
 const username = 'PeterWorakarn'
@@ -8,7 +7,6 @@ const username = 'PeterWorakarn'
 const GithubProjectPage: NextPage = () => {
   const router = useRouter()
   const githubContentQuery = useFetchGithubReposReadMe(username,router.query.name as string);
-  console.log(githubContentQuery)
   return (
     <>
       <h1>{router.query.name}</h1>

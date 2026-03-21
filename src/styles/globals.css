@@ -92,9 +92,10 @@
 @media print {
   @page {
     margin: 0 !important;
+    size: A4;
   }
 
-  body {
+  body {  
     padding: 75px; /* This will act as your margin. Originally, the margin will hide the header and footer text. */
   }
   .resume {

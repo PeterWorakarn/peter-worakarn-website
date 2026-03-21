@@ -1,0 +1,135 @@
+import { TBio, TCareer, TEducation } from '../constant-enum-type/Strapi';
+
+const placeholderImg = {
+  name: 'placeholder.png',
+  alternativeText: 'placeholder',
+  formats: {
+    small: { name: 'small_placeholder.png', width: 500, height: 500, url: 'https://dummyimage.com/500x500/cccccc/ffffff' },
+    thumbnail: { name: 'thumbnail_placeholder.png', width: 156, height: 156, url: 'https://dummyimage.com/156x156/cccccc/ffffff' },
+    medium: { name: 'medium_placeholder.png', width: 750, height: 750, url: 'https://dummyimage.com/750x750/cccccc/ffffff' },
+    large: { name: 'large_placeholder.png', width: 1000, height: 1000, url: 'https://dummyimage.com/1000x1000/cccccc/ffffff' },
+  },
+};
+
+export const mockBio: TBio = {
+  id: 1,
+  published_at: '2021-01-01T00:00:00.000Z',
+  created_at: '2021-01-01T00:00:00.000Z',
+  updated_at: '2021-01-01T00:00:00.000Z',
+  Short_name: 'Peter',
+  First_name: 'Worakarn',
+  Last_name: 'Ounhattapradit',
+  Date_of_birth: '1995-08-12',
+  contact: 'worakarn.oun@gmail.com',
+  telephone: '097-132-0225',
+  location: 'Bangkok, Thailand',
+  Tagline: 'Software Engineer',
+  bio: 'Currently, I work as a Web Developer, driven by a strong desire to combine aesthetics and performance seamlessly, creating exceptional user experiences.',
+  blog: null,
+  github: 'https://github.com/PeterWorakarn',
+  linkedin: 'https://www.linkedin.com/in/worakarn-o/',
+  avatar: placeholderImg,
+  skill_set: ['TypeScript', 'React.js', 'Next.js', 'Node.js', 'Python'],
+};
+
+export const mockCurrentJob: TCareer[] = [
+  {
+    id: 1,
+    published_at: '2021-01-01T00:00:00.000Z',
+    created_at: '2021-01-01T00:00:00.000Z',
+    updated_at: '2021-01-01T00:00:00.000Z',
+    Current_job: true,
+    Title: 'Software Engineer',
+    Company: 'Datayolk',
+    Company_link: 'https://datayolk.net',
+    Description: 'Developing and maintaining scalable web applications, contributing to both frontend and backend systems while collaborating cross-functionally to deliver high-quality product features.',
+    Location: 'Bangkok, Thailand',
+    Start_date: '2021-01-01',
+    End_date: null,
+    Company_logo: placeholderImg,
+  },
+];
+
+export const mockAllJob: TCareer[] = [
+  {
+    id: 1,
+    published_at: '2021-01-01T00:00:00.000Z',
+    created_at: '2021-01-01T00:00:00.000Z',
+    updated_at: '2021-01-01T00:00:00.000Z',
+    Current_job: true,
+    Title: 'Software Engineer',
+    Company: 'Jitta',
+    Company_link: 'https://jitta.com',
+    Description: 'Serving as Web Frontend Specialist and the sole web technology expert, leading the development of financial web applications using Next.js. \n Established frontend code standards, CI/CD pipelines, and Agile development workflows to elevate team productivity and code quality.',
+    Location: 'Bangkok, Thailand',
+    Start_date: '2023-11-01',
+    End_date: null,
+    Company_logo: placeholderImg,
+  },
+  {
+    id: 2,
+    published_at: '2021-01-01T00:00:00.000Z',
+    created_at: '2021-01-01T00:00:00.000Z',
+    updated_at: '2021-01-01T00:00:00.000Z',
+    Current_job: false,
+    Title: 'Software Engineer',
+    Company: 'Orange Cap Innovative',
+    Company_link: 'https://www.orangecapinnovative.com/',
+    Description: 'Developed and maintained full-stack back-office applications for Telemedicine and E-Commerce platforms using Next.js and Nest.js. \n Collaborated with the marketing team to enhance SEO performance and implemented event tracking via Google Analytics 4 to support data-driven decision making.',
+    Location: 'Bangkok, Thailand',
+    Start_date: '2021-06-01',
+    End_date: '2023-10-31',
+    Company_logo: placeholderImg,
+  },
+];
+
+export const mockHighestEducation: TEducation[] = [
+  {
+    id: 1,
+    published_at: '2021-01-01T00:00:00.000Z',
+    created_at: '2021-01-01T00:00:00.000Z',
+    updated_at: '2021-01-01T00:00:00.000Z',
+    School: 'Thammasat University',
+    Degree: "Master's Degree",
+    Current_education: false,
+    Highest_education: true,
+    Field_of_study: 'Computer Science',
+    Start_date: '2013-01-01',
+    End_date: '2017-01-01',
+    Description: '',
+    School_logo: placeholderImg,
+  },
+];
+
+export const mockAllEducation: TEducation[] = [
+  {
+    id: 1,
+    published_at: '2021-01-01T00:00:00.000Z',
+    created_at: '2021-01-01T00:00:00.000Z',
+    updated_at: '2021-01-01T00:00:00.000Z',
+    School: 'Thammasat University',
+    Degree: "Master in Design, Business and Technology Management",
+    Current_education: false,
+    Highest_education: true,
+    Field_of_study: 'Design, Business and Technology Management',
+    Start_date: '2018-01-01',
+    End_date: '2019-01-01',
+    Description: '',
+    School_logo: placeholderImg,
+  },
+  {
+    id: 2,
+    published_at: '2021-01-01T00:00:00.000Z',
+    created_at: '2021-01-01T00:00:00.000Z',
+    updated_at: '2021-01-01T00:00:00.000Z',
+    School: 'Thammasat University',
+    Degree: "Bachelor in Design, Business and Technology Management",
+    Current_education: false,
+    Highest_education: false,
+    Field_of_study: 'Design, Business and Technology Management',
+    Start_date: '2014-01-01',
+    End_date: '2018-01-01',
+    Description: '',
+    School_logo: placeholderImg,
+  },
+];

@@ -2,21 +2,20 @@ import type { NextPage } from 'next';
 import { TBio } from '../constant-enum-type/Strapi';
 import dynamic from 'next/dynamic';
 import { NextSeo } from 'next-seo';
+import { mockBio } from '../mocks/strapiMockData';
 
 const BioContainer = dynamic(import('../features/BioContainer'), { ssr: true });
 const GithubContainer = dynamic(import('../features/GithubContainer'), { ssr: false });
 const DatayolkContainer = dynamic(import('../features/DatayolkContainer'), { ssr: false });
 
 export async function getStaticProps() {
-  const res = await fetch('https://peter.datayolk.net/peter-bio')
-  const Biodata: TBio = await res.json()
-  if (!Biodata) {
-    return {
-      redirect: {
-        destination: '/404',
-        permanent: false,
-      },
-    }
+  let Biodata: TBio;
+  try {
+    const res = await fetch('https://peter.datayolk.net/peter-bio');
+    if (!res.ok) throw new Error('API unavailable');
+    Biodata = await res.json();
+  } catch {
+    Biodata = mockBio;
   }
 
   return {
